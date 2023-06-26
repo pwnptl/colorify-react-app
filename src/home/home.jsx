@@ -7,7 +7,7 @@ const Home = () => {
   const gameData = GamesData();
 
   return (
-    <div className=''>
+    <div className='container'>
       {gameData.map((content, index) => (
         <GameContainerBox key={index} content={content} />
       ))}
