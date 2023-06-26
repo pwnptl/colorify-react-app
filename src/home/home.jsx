@@ -1,11 +1,16 @@
-import LoginPopup from '../login/loginpopup';
 import React, { useState } from 'react';
+import GameContainerBox from './GameContainerBox';
+import GamesData from './GamesData';
 
 const Home = () => {
 
+  const gameData = GamesData();
+
   return (
-    <div>
-      <h1>Welcome to My App</h1>
+    <div className=''>
+      {gameData.map((content, index) => (
+        <GameContainerBox key={index} content={content} />
+      ))}
     </div>
   );
 };
